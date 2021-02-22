@@ -86,7 +86,15 @@ mod tests{
     #[test]
     fn aima_figure_7pt16_has_a_model() {
         // arrange
-        let fc = ForwardChaining::new(vec![HornClause::new(vec![-5, -6]), HornClause::new(vec![-3, -4, 5]), HornClause::new(vec![-2, -3, 4]), HornClause::new(vec![-1, -5, 3]), HornClause::new(vec![-1, -2, 3]), HornClause::new(vec![1]), HornClause::new(vec![2])]);
+        let fc = ForwardChaining::new(
+            vec![
+                HornClause::new(vec![-5, -6]),
+                HornClause::new(vec![-3, -4, 5]),
+                HornClause::new(vec![-2, -3, 4]),
+                HornClause::new(vec![-1, -5, 3]),
+                HornClause::new(vec![-1, -2, 3]),
+                HornClause::new(vec![1]),
+                HornClause::new(vec![2])]);
 
         // act
         let has_model = fc.entails(6);
